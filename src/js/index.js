@@ -70,6 +70,14 @@ TrelloPowerUp.initialize({
               light: ICONS.GOLD
             },
             text: currentUser.gold ? currentUser.gold.toFixed(2) : '?'
+          },
+          {
+            condition: 'always',
+            icon: {
+              dark: ICONS.GOLD,
+              light: ICONS.GOLD
+            },
+            text: currentUser.hp ? currentUser.hp.toFixed(2) : '?'
           }
         );
       }
