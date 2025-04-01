@@ -20,12 +20,12 @@ export default class Task {
     return exp - remainder + Math.round(remainder / 10) * 10; // rounded to the closest 10
   }
 
-  async updateStats({ gp, exp, lvl }) {
+  async updateStats({ gp, exp, lvl, hp }) {
     const gold = gp;
 
     this.notifyAboutStats({ gold, exp });
     const expToNextLevel = await this.calculateExpToNextLevel(lvl);
-    return this.storage.setUser({ lvl, gold, exp, expToNextLevel });
+    return this.storage.setUser({ lvl, gold, exp, expToNextLevel, hp });
   }
 
   async notifyAboutStats({ exp, gold }) {
