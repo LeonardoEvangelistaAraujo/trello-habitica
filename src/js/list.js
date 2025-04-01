@@ -15,6 +15,10 @@ export default class List {
     return this.mark(LIST_TYPES.DOING);
   }
 
+  markAsToDo(){
+    return this.mark(LIST_TYPES.TO_DO);
+  }
+
   async mark(listType) {
     const lists = await this.storage.getLists();
     const list = await this.t.list('id', 'name');

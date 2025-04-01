@@ -160,6 +160,13 @@ TrelloPowerUp.initialize({
                 callback: tt => new List(tt).unmark()
               }
             ];
+          case LIST_TYPES.TO_DO:
+            return [
+              {
+                text: 'Unmark list as "To do"',
+                callback: tt => new List(tt).unmark()
+              }
+            ];
           default:
             return [
               {
@@ -168,6 +175,10 @@ TrelloPowerUp.initialize({
               },
               {
                 text: 'Mark list as "Done"',
+                callback: tt => new List(tt).markAsDone()
+              },
+              {
+                text: 'Mark list as "To do"',
                 callback: tt => new List(tt).markAsDone()
               }
             ];
