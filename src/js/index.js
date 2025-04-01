@@ -74,8 +74,8 @@ TrelloPowerUp.initialize({
           {
             condition: 'always',
             icon: {
-              dark: ICONS.GOLD,
-              light: ICONS.GOLD
+              dark: ICONS.HP,
+              light: ICONS.HP
             },
             text: currentUser.hp ? currentUser.hp.toFixed(2) : '?'
           }
